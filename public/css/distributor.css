@@ -1,0 +1,179 @@
+#distributorleft {
+	float: left;
+	height: 319px;
+	width: 230px;
+	margin-right: 25px;
+}
+
+.disttitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: lighter;
+	color: #FFF;
+}
+
+
+.distributorpic {
+	height: 309px;
+	width: 227px;
+	background-color: #FFF;
+	padding-top: 3px;
+	float: left;
+	margin-right: 10px;
+	padding-left: 3px;
+}
+.distrname {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 34px;
+	color: #FFF;
+	font-weight: bold;
+}
+.distbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	line-height: 1.2em;
+}
+.distbreak {
+	height: 15px;
+}
+.disttext1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFF;
+}
+.distbreak2 {
+	height: 15px;
+}
+.disttextbox {
+	font-size: 12px;
+	height: 324px;
+	overflow: hidden;
+	background-image: url(/images/distributormainbg.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	color:#FFF;
+	width: 881px;
+	margin-left: 5px;
+	padding-top: 12px;
+	padding-right: 15px;
+	padding-left: 15px;
+
+}
+
+#distributorsmallcontainer {
+	float: left;
+	width: 160px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 6px;
+}
+#distsmallpic {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+    width: 130px;
+    height: 150px;
+    vertical-align: bottom;
+    
+}
+.bottom {
+    position: 
+    absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 5px;
+}
+#distributorsmallbox {
+	padding-bottom: 5px;
+	background-repeat: no-repeat;
+	width: 161px;
+	padding-top: 2px;
+	margin-bottom: 15px;
+	min-height: 109px;
+	border: 1px none #DDD;
+	background-image: url(../images/distributorgradient.jpg);
+}
+.distributorprodname {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7DB335;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 6px;
+    height: 46px;
+    overflow: hidden;
+}
+.retailwrapper {
+	position: relative;
+	top: 10px;
+}
+.distleftretail {
+    float: left;
+    width: 80px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.distributorprodtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: center;
+	padding-top: 3px;
+	font-weight: normal;
+	color: #666;
+}
+.distributorprodprice {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: right;
+	color: #666;
+	margin-left: 90px;
+	width: 55px;
+	padding-right: 10px;
+}
+.distmoreinfo a {
+    position: relative;
+    top: 20px;
+    text-indent: -10000px;
+    display: block;
+    width: 73px;
+    height: 17px;
+    background-image: url(/images/moreinfo.gif);
+    left: 43px;
+}
+.distmoreinfo a:hover {
+    text-indent: -10000px;
+    display: block;
+    background-image: url(/images/moreinfo.gif);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.distaddtocart {
+}
+.distaddtocart a {
+	text-indent: -10000px;
+	display: block;
+	width: 86px;
+	height: 17px;
+	background-image: url(/images/addtocart.gif);
+	background-repeat: no-repeat;
+	position: relative;
+	top: 20px;
+	left: 40px;
+}
+.distaddtocart a:hover {
+	background-image: url(/images/addtocart.gif);
+	color: #FFF;
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+}

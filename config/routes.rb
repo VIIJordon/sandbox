@@ -1,5 +1,8 @@
 Sandbox::Application.routes.draw do
-  resources :examples
+  match 'sandbox/:action' => 'sandbox#:action'
+
+    resources :examples
+
 
 
   # The priority is based upon order of creation:

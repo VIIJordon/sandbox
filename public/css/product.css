@@ -1,0 +1,193 @@
+#productthumbcontainer {
+	padding: 15px;
+	width: 97%;
+	margin-top: 15px;
+	margin-bottom: 75px;
+}
+
+#thumbbox {
+	float: left;
+	width: 216px;
+	margin-right: 21px;
+	margin-top: 20px;
+}
+.thumbname {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	font-size: 12px;
+	color: #666;
+}
+
+.productthumb {
+	height: 47px;
+	width: 216px;
+}
+#productcontainer {
+	height: 260px;
+	width: 220px;
+	margin-left: 16px;
+	padding-left: 0px;
+	margin-bottom: 35px;
+	margin-top: 35px;
+	float: left;
+	margin-right: 11px;
+	position: relative;
+}
+.bottompadding {
+	height: 125px;
+	display: block;
+	min-height: 150px;
+	float: left;
+	clear: both;
+}
+
+.moreinfo {
+	width: 55px;
+	display: block;
+	margin-left: 0px;
+	padding-left: 3px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	border-left-color: #CCC;
+	padding-right: 3px;
+	padding-top: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	height: 15px;
+	float: left;
+	margin-right: 0px;
+	background-color: #f0eeee;
+}
+.moreinfo a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6d6e71;
+	text-decoration: none;
+}
+.moreinfo a:hover{
+	text-decoration: none;
+}
+
+.productline {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	height: 32px;
+	width: 100%;
+}
+#productbanner1 {
+	height: 192px;
+	width: 743px;
+	background-image: url(/images/nutritional_20.jpg);
+	margin: 0px;
+}
+.clearfloat {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.addtocart {
+	width: 63px;
+	display: block;
+	padding-left: 3px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding-right: 3px;
+	padding-top: 5px;
+	text-align: center;
+	height: 15px;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	float: left;
+	margin-top: 6px;
+}
+.addtocart a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6d6e71;
+	text-decoration: none;
+}
+.price {
+	width: 74px;
+	display: block;
+	padding-left: 3px;
+	padding-right: 10px;
+	padding-top: 5px;
+	text-align: right;
+	height: 15px;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	float: left;
+	margin-top: 6px;
+	font-size: 11px;
+	font-weight: bold;
+}
+.categorybanner{
+	width: 742px;
+	height: 169px;
+	background-image:url(/images/bannershadow.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding-bottom: 24px;
+}
+.productname {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #8dc63f;
+	/*height: 32px;*/
+	text-align: left;
+	font-weight: bold;
+	padding-top: 10px;
+
+}
+.productpic {
+	height: 150px;
+	width: 130px;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.productheader {
+	height: 82px;
+}
+.productdescription {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #6d6e71;
+	/*height: 50px;*/
+	overflow: hidden;
+	min-height: 27px;
+	margin-top:6px;
+	
+}
+#books {
+	height: 192px;
+	width: 742px;
+	background-image: url(/images/books.jpg);
+	margin: 0px;
+}
+#monthlyspecials {
+	height: 192px;
+	width: 742px;
+	background-image: url(/images/monthlyspecials.jpg);
+	margin: 0px;
+}

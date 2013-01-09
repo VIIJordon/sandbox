@@ -1,0 +1,18 @@
+.customerlabelcontainer {
+  width: 24cm;
+  margin-top: 1.8cm;
+  margin-left: .5cm;
+  display: block;  
+}
+.customerlabel {
+  float: left;
+  width: 6.6675cm;
+  height: 2.3cm;
+  font-size: 12pt;
+  margin-left: .55cm;
+  margin-right: .55cm;
+/*  margin-top: 1.27cm;
+  margin-bottom: 1.27cm;*/
+  font-family:'Times New Roman',Times,serif;
+
+}

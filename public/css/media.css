@@ -1,0 +1,66 @@
+.recentvideo {
+  float: left;
+  width: 640px;
+  position: relative; /*or absolute*/
+z-index: 0;
+}
+.recentright {
+  margin-left: 660px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+
+}
+.mediatitle1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #666;
+}
+.mediatitle2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+.mediacategorytext {
+  width: 750px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+
+.mediadescription1 {
+  margin-top: 30px;
+  font-size: 12px;
+  line-height: 1.8em;
+}
+.recent {
+  color: #7aae32;
+  font-weight: bold;
+  font-size: 11px;
+}
+#mediabottomcontainer {
+  margin-top: 30px;
+  margin-bottom: 45px;
+  padding-top: 10px;
+  background-color: #E9E9E9;
+  border: 1px solid #CCC;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+}
+#mediatopcontainer {
+
+}
+.videospacing {
+  margin-right: 18px;
+  width: 160px;
+  float: left;
+  margin-top: 15px;
+}
+
+#videocontainer1 {
+  vertical-align: top;
+}

@@ -1,0 +1,35 @@
+#footerbox {
+	width: 911px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding-top: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #4b4848;
+	line-height: 3em;
+}
+.footerlinks {
+}
+.footerlinks a {
+	color: #4b4848;
+	padding-right: 40px;
+	text-decoration: none;
+}
+.footerlinks a:hover {
+	color: #9D9999;
+}
+.footerlinks2 {
+}
+.footerlinks2 a {
+	color: #4b4848;
+	text-decoration: none;
+}
+.footerimg {
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.footerlinks2 a:hover {
+	color: #9D9999;
+}

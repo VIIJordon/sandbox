@@ -5,7 +5,6 @@ class ExamplesController < ApplicationController
     @examples = Example.all
 
     respond_to do |format|
-      format.html # index.html.erb
       format.json { render json: @examples }
     end
   end
@@ -16,7 +15,6 @@ class ExamplesController < ApplicationController
     @example = Example.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
       format.json { render json: @example }
     end
   end
@@ -27,7 +25,6 @@ class ExamplesController < ApplicationController
     @example = Example.new
 
     respond_to do |format|
-      format.html # new.html.erb
       format.json { render json: @example }
     end
   end
@@ -44,10 +41,8 @@ class ExamplesController < ApplicationController
 
     respond_to do |format|
       if @example.save
-        format.html { redirect_to @example, notice: 'Example was successfully created.' }
         format.json { render json: @example, status: :created, location: @example }
       else
-        format.html { render action: "new" }
         format.json { render json: @example.errors, status: :unprocessable_entity }
       end
     end
@@ -60,10 +55,8 @@ class ExamplesController < ApplicationController
 
     respond_to do |format|
       if @example.update_attributes(params[:example])
-        format.html { redirect_to @example, notice: 'Example was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
         format.json { render json: @example.errors, status: :unprocessable_entity }
       end
     end
