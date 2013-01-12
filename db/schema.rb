@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130108225307) do
+ActiveRecord::Schema.define(:version => 20130110194655) do
+
+  create_table "bankrolls", :force => true do |t|
+    t.string   "purchase"
+    t.text     "brief"
+    t.datetime "date_purchased"
+    t.string   "amount"
+    t.boolean  "rosemary"
+    t.boolean  "jordon"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "examples", :force => true do |t|
     t.string   "name"

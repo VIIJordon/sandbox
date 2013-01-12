@@ -1,5 +1,12 @@
 Sandbox::Application.routes.draw do
-  resources :examples
+  match 'bankrolls/:action' => 'bankrolls#action'
+  resources :bankrolls, summary
+
+
+  match 'sandbox/:action' => 'sandbox#action'
+    resources :examples, :bankrolls
+
+
 
 
   # The priority is based upon order of creation:
