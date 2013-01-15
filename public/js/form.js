@@ -1,6 +1,10 @@
 Ext.require([
+    'Ext.data.Store',
+    'Ext.util.Format',
+    'Ext.grid.Panel',
+
     'Ext.form.*',
-    'Ext.data.*'
+    'Ext.data.*',
 ]);
 
 Ext.onReady(function(){
@@ -10,21 +14,22 @@ Ext.define('Example', {
     {name:'id',type:'int'},
     {name:'name',type:'string'},
     {name:'brief',type:'string'},
-    {name:'show',type:'boolean'}
+    {name:'show',type:'bool'},
+    {name:'date',type:'date'}
   ],
   idProperty:'id',
-  proxy:{type:'rest',url:'/examples',fornat:'json'}
+  proxy:{type:'rest',url:'/examples',format:'json'}
 });
 
+      var me = this;
       var store = Ext.create('Ext.data.Store', {
           model: 'Example'
           ,
           autoLoad: true
       });
-   
+      store.load();
       // Simple ComboBox using the data store
       var find_combo = Ext.create('Ext.form.field.ComboBox', {
-        store:store,
         valueField: 'id',
         displayField: 'name',
         loadingText: 'Searching...',
@@ -34,6 +39,10 @@ Ext.define('Example', {
         pageSize: 20,
         listWidth: 350,
         hideTrigger: false,
+        store:  Ext.create('Ext.data.Store', {
+          model: 'Example',
+          autoLoad:true
+        }),
         //tpl: find_template,
         //itemSelector: 'div.search-item',
         emptyText: 'Search by name, company or ID...',
@@ -47,26 +56,19 @@ Ext.define('Example', {
               Example.load(records[0].data.id, {
                 success: function(record) {}
               });
+              formPanel.enable();
+              me.example = Ext.create('Example',records[0].data,records[0].data.id)
+              formPanel.loadRecord(records[0])
+
             }
           }
         }
       });
-
-    Ext.define('example', {
-        extend: 'Ext.data.Model',
-        fields: [
-            {name: 'first'},
-            {name: 'last'},
-            'company', 'email', 'state',
-            {name: 'dob', type: 'date', dateFormat: 'm/d/Y'}
-        ]
-    });2
-
     var formPanel = Ext.create('Ext.form.Panel', {
         renderTo: 'form-ct',
         frame: true,
         title:'Form',
-        width: 340,
+        width: 520,
         bodyPadding: 5,
         waitMsgTarget: true,
 
@@ -76,41 +78,64 @@ Ext.define('Example', {
             msgTarget: 'side'
         },
         dockedItems: [{
-          xtype: 'toolbar',
           dock: 'top',
-          items: find_combo
+          xtype: 'toolbar',
+          items: [{
+            text:'Add',
+            tooltip:'Add a new spotlight',
+            iconCls:'add',
+            handler: function() {
+              console.log('adding new guy');
+              me.example = Ext.create('Example', {
+                title : '',
+                brief:'',
+                date:'',
+                show:''
+              });
+              formPanel.loadRecord(me.example)
+            }
+          }, '-', {
+            text:'Save',
+            tooltip:'Save the current record',
+            iconCls:'save',
+            handler: function(widget,event) {
+              formPanel.getForm().updateRecord(me.example)
+              // me.example.updated_at = new date();
+              console.log('example ' + me.example.getId() + ' set')
+              me.example.save();
+            }
+          },'-',{
+            text:'Remove',
+            tooltip:'Remove the example',
+            iconCls:'remove'
+          },
+          find_combo]
         }],
         items: [{
             xtype: 'fieldset',
-            title: 'Contact Information',
+            title: 'Example Information',
             defaultType: 'textfield',
             defaults: {
                 width: 280
             },
             items: [{
-                    fieldLabel: 'First Name',
-                    emptyText: 'First Name',
-                    name: 'first'
+                    fieldLabel: 'Name',
+                    emptyText: 'Name',
+                    name: 'name'
                 }, {
-                    fieldLabel: 'Last Name',
-                    emptyText: 'Last Name',
-                    name: 'last'
+                    fieldLabel: 'description',
+                    emptyText: 'description',
+                    name: 'brief'
                 }, {
-                    fieldLabel: 'Company',
-                    name: 'company'
-                }, {
-                    fieldLabel: 'Email',
-                    name: 'email',
-                    vtype:'email'
+                    fieldLabel: 'show',
+                    name: 'show',
+                    xtype: 'checkbox'
                 }, {
                     xtype: 'datefield',
-                    fieldLabel: 'Date of Birth',
-                    name: 'dob',
-                    allowBlank: false,
-                    maxValue: new Date()
+                    fieldLabel: 'Date created',
+                    name: 'date'
                 }
             ]
         }]
     });
-
 });
