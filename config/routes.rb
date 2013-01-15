@@ -2,6 +2,12 @@ Sandbox::Application.routes.draw do
   match 'sandbox/:action' => 'sandbox#:action'
 
     resources :examples
+    resources :form_types
+
+
+  match 'sandbox/:action' => 'sandbox#action'
+    resources :examples, :bankrolls
+
 
 
 

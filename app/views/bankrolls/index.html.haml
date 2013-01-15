@@ -1,0 +1,29 @@
+%h1 Listing bankrolls
+
+%table
+  %tr
+    %th Purchase
+    %th Brief
+    %th Date purchased
+    %th Amount
+    %th Rosemary
+    %th Jordon
+    %th
+    %th
+    %th
+
+  - @bankrolls.each do |bankroll|
+    %tr
+      %td= bankroll.purchase
+      %td= bankroll.brief
+      %td= bankroll.date_purchased
+      %td= bankroll.amount
+      %td= bankroll.rosemary
+      %td= bankroll.jordon
+      %td= link_to 'Show', bankroll
+      %td= link_to 'Edit', edit_bankroll_path(bankroll)
+      %td= link_to 'Destroy', bankroll, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Bankroll', new_bankroll_path

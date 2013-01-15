@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Purchase:
+  = @bankroll.purchase
+%p
+  %b Brief:
+  = @bankroll.brief
+%p
+  %b Date purchased:
+  = @bankroll.date_purchased
+%p
+  %b Amount:
+  = @bankroll.amount
+%p
+  %b Rosemary:
+  = @bankroll.rosemary
+%p
+  %b Jordon:
+  = @bankroll.jordon
+
+= link_to 'Edit', edit_bankroll_path(@bankroll)
+\|
+= link_to 'Back', bankrolls_path

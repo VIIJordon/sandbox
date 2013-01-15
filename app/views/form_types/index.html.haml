@@ -1,0 +1,25 @@
+%h1 Listing form_types
+
+%table
+  %tr
+    %th Name
+    %th Show
+    %th Brief
+    %th Date
+    %th
+    %th
+    %th
+
+  - @form_types.each do |form_type|
+    %tr
+      %td= form_type.name
+      %td= form_type.show
+      %td= form_type.brief
+      %td= form_type.date
+      %td= link_to 'Show', form_type
+      %td= link_to 'Edit', edit_form_type_path(form_type)
+      %td= link_to 'Destroy', form_type, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Form type', new_form_type_path
